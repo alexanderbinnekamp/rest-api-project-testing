@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "5492a004-d700-4496-9140-aa9c32c212ff",
+		"name": "REST API PROJECT TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24331796"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "/item Get all items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/item",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<id> Get item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/item/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item Post item",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NTQzMTIwNywianRpIjoiNWQzNDI3MDYtMDI4MS00NGI0LWJiNTYtYzNkY2FmN2M1YTA3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc1NDMxMjA3LCJleHAiOjE2NzU0MzIxMDd9.Kz3v1thSfbdxS1YATc_HPhg82pG2cYfpMEdCnTobsRg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"chocolate pies\",\n    \"price\": 17.99,\n    \"store_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/item",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<id> Delete item",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NTQyOTk4OCwianRpIjoiNDZlMTUyNTItMzU2NS00ZTliLTg5MjEtMjczMTQ3YjRhMjMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc1NDI5OTg4LCJleHAiOjE2NzU0MzA4ODh9.fIqQssqGLGuCPWV8p2h38AXp42qgKOvHxdqBKrP4B0A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/item/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<id> Delete item",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NTQyOTk4OCwianRpIjoiNDZlMTUyNTItMzU2NS00ZTliLTg5MjEtMjczMTQ3YjRhMjMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc1NDI5OTg4LCJleHAiOjE2NzU0MzA4ODh9.fIqQssqGLGuCPWV8p2h38AXp42qgKOvHxdqBKrP4B0A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Another flair\",\n    \"price\": 20.5,\n    \"store_id\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/item/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "/store Get all store data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<id> Get store data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/store/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store Post new store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NTQzMTIwNywianRpIjoiNWQzNDI3MDYtMDI4MS00NGI0LWJiNTYtYzNkY2FmN2M1YTA3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc1NDMxMjA3LCJleHAiOjE2NzU0MzIxMDd9.Kz3v1thSfbdxS1YATc_HPhg82pG2cYfpMEdCnTobsRg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"my store 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/store",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<id> Delete store",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NTQyOTk4OCwianRpIjoiNDZlMTUyNTItMzU2NS00ZTliLTg5MjEtMjczMTQ3YjRhMjMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjc1NDI5OTg4LCJleHAiOjE2NzU0MzA4ODh9.fIqQssqGLGuCPWV8p2h38AXp42qgKOvHxdqBKrP4B0A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/store/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "/tag/<id> Get tag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tag/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<id>/tag Create tags in store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Chocolate\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/store/1/tag",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"1",
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<id>/tags Get tags in store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/store/1/tag",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"1",
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/tag/<id> Delete tag",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tag/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Items_tags",
+			"item": [
+				{
+					"name": "/item/<id>/tag/<id> Post link item with tag",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/item/1/tag/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"1",
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<id>/tag/<id> Delete link item with tag",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/item/1/tag/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"1",
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "/register - create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"alexander\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/<id> - get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/<id> - delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/login - authenticate user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"alexander\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/logout - revoke JWT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"alexander\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/refresh - get non-fresh token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
